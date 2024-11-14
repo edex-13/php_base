@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "./buttons.css";
+@import "./header.css";
+@import "./footer.css";
+
+:root {
+  --main_color: #b81616;
+  --main_color_two: #871111;
+  --fontBase: 'Poppins', sans-serif;
+  --second_color: #42E2B8;
+  --black: #222222;
+  --white: #fff;
+  --button: bold 14px/22px var(--fontBase);
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--fontBase);
+  list-style: none;
+  transition: border 0.3s ease;
+
+  text-decoration: none;
+
+}
+
+.main_container--cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.wrapper {
+  max-inline-size: 1158px;
+  padding-inline-end: 16px;
+  padding-inline-start: 16px;
+  margin: auto;
+}
+
+
+form {
+  max-width: 350px;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
+  border: 2px solid #dadada;
+  background: #f7f7f7;
+  border-radius: 6px;
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+  transition: border 0.3s ease 0s;
+  margin-top: 15px;
+}
+
+.vehicle-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  transition: transform 0.3s ease;
+  margin: 20px;
+}
+
+.vehicle-card:hover {
+  transform: translateY(-5px);
+}
+
+.vehicle-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.vehicle-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-image img:hover {
+  transform: scale(1.05);
+}
+
+.vehicle-info {
+  padding: 20px;
+}
+
+.vehicle-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.vehicle-year {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.vehicle-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--main_color);
+  margin: 10px 0;
+}
+
+.vehicle-stock {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+.vehicle-description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin: 15px 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.vehicle-button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: var(--main_color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vehicle-button:hover {
+  background-color: var(--main_color_two);
+}
+
+@media (max-width: 768px) {
+  .vehicle-card {
+    max-width: 100%;
+    margin: 10px;
+  }
+}
